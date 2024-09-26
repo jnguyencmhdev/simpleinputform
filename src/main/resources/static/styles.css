@@ -79,12 +79,11 @@ th {
     background-color: #f2f2f2;
     text-transform: uppercase;
 }
-.error-message {
+error-message {
     display: none;
     color: red;
     font-size: 12px;
 }
-
 input:invalid + .error-message {
     display: inline;
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Entry Application</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Data Entry Form</h1>
+    <form id="dataEntryForm" action="/entries" method="post">
+        <div>
+            <label>Name:</label>
+            <input type="text" name="name" required>
+            <span class="error-message">* Name is required.</span>
+        </div>
+        <div>
+            <label>Age:</label>
+            <input type="number" name="age">
+        </div>
+        <div>
+            <label>Title:</label>
+            <input type="text" name="title" required>
+            <span class="error-message">* Title is required.</span>
+        </div>
+        <div>
+            <label>Hometown:</label>
+            <input type="text" name="hometown">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Previous Person Entries</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Title</th>
+                <th>Hometown</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="entryField : ${entries}">
+                <td th:text="${entryField.name}"></td>
+                <td th:text="${entryField.age}"></td>
+                <td th:text="${entryField.title}"></td>
+                <td th:text="${entryField.hometown}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

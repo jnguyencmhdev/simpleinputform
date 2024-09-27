@@ -2,6 +2,7 @@
 :: some computer not able open browser after start the application, open ahead time
 start http://localhost:8080
 
+::java -jar simpleinputform-0.0.1-SNAPSHOT.jar
 java -jar simpleinputform-0.0.1-SNAPSHOT.jar
 :: Check if the simpleinputform started successfully
 if %errorlevel% neq 0 (
